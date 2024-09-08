@@ -1,0 +1,59 @@
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+.font-merriweather {
+    font-family: 'Merriweather', serif;
+}
+.font-roboto {
+    font-family: "Roboto", sans-serif;
+}
+.font-roadrage {
+    font-family: "Road Rage", sans-serif;
+}
+.bg-wrey {
+	background-color: #F3F8FC;
+}
+.header-transparent {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+.header-white {
+	background-color: rgba(243, 248, 252, 0.8);
+	backdrop-filter: blur(10px);
+	transition: background-color 0.3s ease, color 0.3s ease, backdrop-filter 0.3s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.header-transparent a,
+.header-white a {
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+.header-transparent nav > a:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: white;
+}
+.header-white nav > a:hover,
+.header-white a.active {
+	background-color: rgba(200, 200, 200, 0.6);
+	color: #333;
+}
+.header-nav a.active {
+    background-color: #000;
+    color: #fff;
+}
+#example_wrapper .dataTables_scrollBody::-webkit-scrollbar {
+    display: none;
+}
+#example_wrapper .dataTables_scrollBody {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#example_filter input {
+    padding: 0.5rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.375rem;
+    width: 250px;
+}
+#example_filter {
+    margin-bottom: 1rem;
+}
