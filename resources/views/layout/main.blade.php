@@ -11,14 +11,16 @@
 
     {{-- tailwind css --}}
     @vite('resources/css/app.css')
+	{{-- css eksternal --}}
   	<link rel="stylesheet" href="{{ asset("../css/style.css") }}">
+
 </head>
 <body class="bg-gray-100 p-0 m-0 w-full h-full font-poppins">
 
 	<div>
 		
 		<!-- Sticky Header -->
-		<header class="fixed w-full z-30 py-3 px-5 lg:px-52 header-transparent backdrop-blur">
+		<header class="fixed w-full z-30 py-3 px-5 lg:px-52 backdrop-blur">
 			<div class="container mx-auto grid grid-cols-4 col-auto items-center">
 				<div class="font-bold flex items-center col-span-3 lg:col-span-1">
 					<a href="{{ route('index') }}"><img class="size-10 mr-2.5" src="{{ asset("../image/ge-green.png") }}" alt="icon header"></a>
@@ -57,6 +59,7 @@
 				<a href="#program" class="block py-2 px-4 text-sm ">Program</a>
 				<a href="#peringkat" class="block py-2 px-4 text-sm ">Peringkat</a>
 				<a href="#contact" class="block py-2 px-4 text-sm ">Kontak</a>
+				<a href="{{ route("admin") }}" class="block py-2 px-4 text-sm">Admin</a>
 				@if(Auth::user())
 					<form id="logout-form" action="{{ route("logout") }}" method="GET">
 						@csrf
@@ -69,10 +72,11 @@
 		</header>
 
 		<!-- Logout Button -->
-		<div id="dropdownMenu" class="hidden fixed right-52 top-20 rounded-md shadow-lg bg-white hover:bg-black duration-300 z-50 flex items-center justify-center">
-			<a href="#" 
-			onclick="event.preventDefault(); document.getElementById('logout-form').submit();" 
-			class="text-sm px-4 py-2 text-gray-700 hover:text-white">
+		<div id="dropdownMenu" class="hidden fixed right-[160px] top-20 z-50 flex items-center justify-center gap-2">
+			<a href="{{ route("admin") }}" class="text-sm px-4 py-2 rounded-md shadow-lg bg-white hover:bg-black border-2 border-black duration-300 text-gray-700 hover:text-white">
+				Admin
+			</a>
+			<a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="text-sm px-4 py-2 rounded-md shadow-lg bg-white hover:bg-black border-2 border-black duration-300 text-gray-700 hover:text-white">
 				Logout
 			</a>
 			<form id="logout-form" action="{{ route("logout") }}" method="GET" class="hidden">

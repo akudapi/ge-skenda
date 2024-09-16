@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PeringkatController;
@@ -20,3 +21,18 @@ Route::get('/pilah',[HomeController::class,'pilah'])->name('pilah');
 Route::get('/beasiswa',[HomeController::class,'beasiswa'])->name('beasiswa');
 Route::get('/minyak',[HomeController::class,'minyak'])->name('minyak');
 Route::get('/pot',[HomeController::class,'pot'])->name('pot');
+
+
+Route::middleware(['auth'])->group(function(){
+
+    // Route untuk halaman admin
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+
+    // Route untuk update data
+    Route::post('/admin/update/{id}', [AdminController::class, 'update'])->name('admin.update');
+
+    // Route untuk delete data
+    Route::post('/admin/delete/{id}', [AdminController::class, 'destroy'])->name('admin.delete');
+
+
+});

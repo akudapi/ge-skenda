@@ -26,15 +26,15 @@ class LoginController extends Controller
         ];
 
         if(Auth::attempt($data)){
-            return redirect()->route('index');
-       }else{
-        return redirect()->route('index');
+            return redirect()->back();
+        }else{
+            return redirect()->back();
        }
 
     }
 
     public function logout(){
         Auth::logout();
-        return redirect()->route('index');
+        return redirect()->back();
     }
 }

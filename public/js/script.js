@@ -88,6 +88,14 @@ menuToggle.addEventListener('click', () => {
   mobileMenu.classList.toggle('hidden');
 });
 
+// MENU TOGGLE FOR MOBILE
+const sideToggle = document.getElementById('side-toggle');
+const sideMenu = document.getElementById('side-menu');
+
+sideToggle.addEventListener('click', () => {
+    sideMenu.classList.toggle('hidden');
+});
+
 // UNTUK BUTTON ACTIVE WAKTU DI HALAMAN/SECTION TERTENTU
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
@@ -200,4 +208,24 @@ if (urlParams.has('scroll')) {
     if (peringkatSection) {
         peringkatSection.scrollIntoView({ behavior: 'smooth' });
     }
+}
+
+function openEditModal(id, jurusan, poin) {
+    document.getElementById('editId').value = id;
+    document.getElementById('editPoin').value = poin;
+    document.getElementById('editForm').action = `/admin/update/${id}`;
+    document.getElementById('editModal').classList.remove('hidden');
+}
+
+function closeEditModal() {
+    document.getElementById('editModal').classList.add('hidden');
+}
+
+function openDeleteModal(action) {
+    document.getElementById('deleteForm').action = action;
+    document.getElementById('deleteModal').classList.remove('hidden');
+}
+
+function closeDeleteModal() {
+    document.getElementById('deleteModal').classList.add('hidden');
 }
