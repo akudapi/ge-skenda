@@ -59,7 +59,7 @@
 				<a href="#program" class="block py-2 px-4 text-sm ">Program</a>
 				<a href="#peringkat" class="block py-2 px-4 text-sm ">Peringkat</a>
 				<a href="#contact" class="block py-2 px-4 text-sm ">Kontak</a>
-				<a href="{{ route("admin") }}" class="block py-2 px-4 text-sm">Admin</a>
+				<a href="{{ route("admin.poin") }}" class="block py-2 px-4 text-sm">Admin</a>
 				@if(Auth::user())
 					<form id="logout-form" action="{{ route("logout") }}" method="GET">
 						@csrf
@@ -73,7 +73,7 @@
 
 		<!-- Logout Button -->
 		<div id="dropdownMenu" class="hidden fixed right-[160px] top-20 z-50 flex items-center justify-center gap-2">
-			<a href="{{ route("admin") }}" class="text-sm px-4 py-2 rounded-md shadow-lg bg-white hover:bg-black border-2 border-black duration-300 text-gray-700 hover:text-white">
+			<a href="{{ route("admin.poin") }}" class="text-sm px-4 py-2 rounded-md shadow-lg bg-white hover:bg-black border-2 border-black duration-300 text-gray-700 hover:text-white">
 				Admin
 			</a>
 			<a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="text-sm px-4 py-2 rounded-md shadow-lg bg-white hover:bg-black border-2 border-black duration-300 text-gray-700 hover:text-white">

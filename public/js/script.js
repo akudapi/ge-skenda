@@ -213,7 +213,7 @@ if (urlParams.has('scroll')) {
 function openEditModal(id, jurusan, poin) {
     document.getElementById('editId').value = id;
     document.getElementById('editPoin').value = poin;
-    document.getElementById('editForm').action = `/admin/update/${id}`;
+    document.getElementById('editForm').action = `/admin/poin/update/${id}`;
     document.getElementById('editModal').classList.remove('hidden');
 }
 

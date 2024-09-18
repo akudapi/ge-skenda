@@ -13,7 +13,7 @@ class PeringkatController extends Controller
         // Validasi input
         $request->validate([
             'jurusan' => 'required|exists:jurusans,id',
-            'point' => 'required|integer|min:1',
+            'point' => 'required|integer|min:0',
         ]);
     
         // Simpan data ke dalam database
@@ -24,7 +24,7 @@ class PeringkatController extends Controller
         ]);
     
         // Redirect kembali
-        return redirect()->back();
+        return redirect()->route('index', '#peringkat');
     }
     
 }

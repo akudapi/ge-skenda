@@ -26,13 +26,10 @@ Route::get('/pot',[HomeController::class,'pot'])->name('pot');
 Route::middleware(['auth'])->group(function(){
 
     // Route untuk halaman admin
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
-
+    Route::get('/admin/poin', [AdminController::class, 'peringkat'])->name('admin.poin');
     // Route untuk update data
-    Route::post('/admin/update/{id}', [AdminController::class, 'update'])->name('admin.update');
-
+    Route::post('/admin/poin/update/{id}', [AdminController::class, 'update'])->name('admin.poin.update');
     // Route untuk delete data
-    Route::post('/admin/delete/{id}', [AdminController::class, 'destroy'])->name('admin.delete');
-
-
+    Route::post('/admin/poin/delete/{id}', [AdminController::class, 'destroy'])->name('admin.poin.delete');
+    
 });
