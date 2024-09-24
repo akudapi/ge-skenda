@@ -261,9 +261,8 @@
 				<div>
 					<div class="lg:col-span-1 row-span-1">
 						<div class="text-left space-y-2 w-full">
-							<p class="bg-gray-200 py-2 px-2 shadow-md rounded-lg"><strong>Email:</strong> lorem.ipsum@example.com</p>
-							<p class="bg-gray-200 py-2 px-2 shadow-md rounded-lg"><strong>Instagram:</strong> @loremipsum.id</p>
-							<p class="bg-gray-200 py-2 px-2 shadow-md rounded-lg"><strong>WA:</strong> +62 123 4567 890(Zahwa)</p>
+							<p class="bg-gray-200 py-2 px-2 shadow-md rounded-lg"><strong>Email:</strong> greeneconomysmkn2bjm@gmail.com</p>
+							<p class="bg-gray-200 py-2 px-2 shadow-md rounded-lg"><strong>Instagram:</strong> @greeneconomysmkn2bjm</p>
 						</div>
 					</div>
 					{{-- <div class="lg:col-span-1 row-span-2">

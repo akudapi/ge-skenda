@@ -10,8 +10,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Road+Rage&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     {{-- tailwind css --}}
-    @vite('resources/css/app.css')
-  	<link rel="stylesheet" href="{{ asset("../css/style.css") }}">
+	<link rel="stylesheet" href="{{ asset('build/assets/app-9kXum9lR.css') }}">
+	{{-- css --}}
+	<link rel="stylesheet" href="{{ asset("css/style.css") }}">
+
 </head>
 <body class="bg-gray-100 p-0 m-0 w-full h-full font-poppins">
 
@@ -71,7 +73,11 @@
 
         @yield('content')
         
-    <script src="{{ asset("../js/script.js") }}"></script>
+    </div>
+        
+	<script src="{{ asset('build/assets/app-CEsE5a7F.js') }}"></script>
+    <script src="{{ asset("js/script.js") }}"></script>
+    
 </body>
 
 </html>
