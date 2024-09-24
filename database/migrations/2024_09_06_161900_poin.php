@@ -45,14 +45,14 @@ return new class extends Migration
 
         // data poin
         DB::table('poins')->insert([
-            ['jurusans_id' => 1, 'poin' => 100, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 2, 'poin' => 80, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 3, 'poin' => 95, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 4, 'poin' => 60, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 5, 'poin' => 10, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 6, 'poin' => 8, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 7, 'poin' => 9, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 8, 'poin' => 6, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
+            ['jurusans_id' => 1, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
+            ['jurusans_id' => 2, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
+            ['jurusans_id' => 3, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
+            ['jurusans_id' => 4, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
+            ['jurusans_id' => 5, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
+            ['jurusans_id' => 6, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
+            ['jurusans_id' => 7, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
+            ['jurusans_id' => 8, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
         ]);
 
     }
