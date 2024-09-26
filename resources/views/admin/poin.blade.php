@@ -2,9 +2,10 @@
 
 @section('content')
 
+    <div  class="md:col-span-6 overflow-auto">
         <!-- Main content -->
-        <main class="xl:col-span-6 sm:col-span-1 md:col-span-1 relative z-0 size-full">
-            <div class="container m-auto sm:p-12 p-2 w-full">
+        <main class="z-0 w-full h-screen flex justify-center">
+            <div class="container md:p-8 p-4 w-full">
                 <h2 class="text-2xl font-bold mb-6">Kelola Poin Jurusan</h2>
                 
                 @if (session('success'))
@@ -20,7 +21,7 @@
                             <th class="border-y-2 border-slate-700 py-2">Jurusan</th>
                             <th class="border-y-2 border-slate-700 py-2">Tanggal</th>
                             <th class="border-y-2 border-slate-700 py-2">Poin</th>
-                            <th class="border-y-2 border-slate-700 py-2 sm:w-36">Aksi</th>
+                            <th class="border-y-2 border-slate-700 py-2 md:w-36">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>

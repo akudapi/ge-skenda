@@ -13,8 +13,6 @@ Route::get('/',[HomeController::class,'index'])->name('index');
 Route::post('/login-proses',[LoginController::class,'login_proses'])->name('login-proses');
 Route::get('/logout',[LoginController::class,'logout'])->name('logout');
 
-// route nambah point(kg)
-Route::post('/point-proses',[PeringkatController::class,'point_proses'])->name('point-proses');
 
 // route detail program
 Route::get('/pilah',[HomeController::class,'pilah'])->name('pilah');
@@ -25,6 +23,9 @@ Route::get('/pot',[HomeController::class,'pot'])->name('pot');
 
 Route::middleware(['auth'])->group(function(){
 
+    // route nambah point(kg)
+    Route::post('/point-proses',[PeringkatController::class,'point_proses'])->name('point-proses');
+    
     // Route untuk halaman admin
     Route::get('/admin/poin', [AdminController::class, 'peringkat'])->name('admin.poin');
     // Route untuk update data

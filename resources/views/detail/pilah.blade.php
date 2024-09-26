@@ -3,7 +3,7 @@
 @section('content')
 
 	<!-- Program Section -->
-	<section id="program" class="py-12 px-8 lg:px-52 bg-wrey">
+	<section id="program" class="py-12 px-8 lg:px-32 bg-wrey">
 		<div class="lg:my-16 my-8">
 			<h2 class="lg:text-3xl text-2xl font-bold mb-4">Pengelolaan Sampah Plastik</h2>
 			<div class="hyphens-auto flex flex-col gap-3">

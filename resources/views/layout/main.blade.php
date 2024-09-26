@@ -10,7 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Road+Rage&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     {{-- tailwind css --}}
-	<link rel="stylesheet" href="{{ asset('build/assets/app-9kXum9lR.css') }}">
+	@vite('resources/css/app.css')
 	{{-- css eksternal --}}
   	<link rel="stylesheet" href="{{ asset("css/style.css") }}">
 
@@ -20,7 +20,7 @@
 	<div>
 		
 		<!-- Sticky Header -->
-		<header class="fixed w-full z-30 py-3 px-5 lg:px-52 backdrop-blur">
+		<header class="fixed w-full z-30 py-3 px-5 lg:px-32 backdrop-blur">
 			<div class="container mx-auto grid grid-cols-4 col-auto items-center">
 				<div class="font-bold flex items-center col-span-3 lg:col-span-1">
 					<a href="{{ route('index') }}"><img class="size-10 mr-2.5" src="{{ asset("../image/ge-green.png") }}" alt="icon header"></a>
@@ -59,7 +59,9 @@
 				<a href="#program" class="block py-2 px-4 text-sm ">Program</a>
 				<a href="#peringkat" class="block py-2 px-4 text-sm ">Peringkat</a>
 				<a href="#contact" class="block py-2 px-4 text-sm ">Kontak</a>
-				<a href="{{ route("admin.poin") }}" class="block py-2 px-4 text-sm">Admin</a>
+				@if (Auth::user())
+					<a href="{{ route("admin.poin") }}" class="block py-2 px-4 text-sm">Admin</a>
+				@endif
 				@if(Auth::user())
 					<form id="logout-form" action="{{ route("logout") }}" method="GET">
 						@csrf
@@ -72,7 +74,7 @@
 		</header>
 
 		<!-- Logout Button -->
-		<div id="dropdownMenu" class="hidden fixed right-[160px] top-20 z-50 flex items-center justify-center gap-2">
+		<div id="dropdownMenu" class="hidden fixed right-20 top-20 z-50 flex items-center justify-center gap-2">
 			<a href="{{ route("admin.poin") }}" class="text-sm px-4 py-2 rounded-md shadow-lg bg-white hover:bg-black border-2 border-black duration-300 text-gray-700 hover:text-white">
 				Admin
 			</a>
@@ -118,18 +120,6 @@
         @yield('content')
 
 	</div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            @if ($errors->any())
-                toggleModalPoint();
-    
-                let peringkatSection = document.getElementById('peringkat');
-                if (peringkatSection) {
-                    peringkatSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            @endif
-        });
-    </script>
 
 	<script src="{{ asset('build/assets/app-CEsE5a7F.js') }}"></script>
     <script src="{{ asset("js/script.js") }}"></script>

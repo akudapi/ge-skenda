@@ -4,7 +4,7 @@
 @section('content')
 
 		<!-- Hero Section -->
-		<section id="home" class="relative w-full h-screen bg-cover bg-center lg:px-52 px-8" style="background-image: url({{ asset('../image/bg-image.jpg') }});">
+		<section id="home" class="relative w-full h-screen bg-cover bg-center lg:px-32 px-8" style="background-image: url({{ asset('../image/bg-image.jpg') }});">
 			<div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
 			<div class="relative z-20 flex flex-col justify-center h-full text-white">
 				<div class="lg:grid lg:grid-cols-5 flex flex-col-reverse">
@@ -25,7 +25,7 @@
 		</section>
 
 		<!-- About Section -->
-		<section id="about" class="py-8 lg:px-52 px-8 bg-wrey flex justify-center items-center">
+		<section id="about" class="py-8 lg:px-32 px-8 bg-wrey flex justify-center items-center">
 			<div class="my-10 lg:grid lg:grid-cols-4 gap-6 container mx-auto">
 				<div class="lg:col-span-1 flex justify-center items-center">
 					<img class="" src="{{ asset("../image/tps.jpg") }}" alt="leaf">
@@ -46,15 +46,15 @@
 		</section>
 
 		<!-- Program Section -->
-		<section id="program" class="py-12 px-8 lg:px-52 bg-wrey">
+		<section id="program" class="py-12 px-8 lg:px-32 bg-wrey flex justify-center items-center">
 			<div class="container lg:my-16 my-8">
 				<h2 class="lg:text-3xl text-2xl font-bold mb-8">Program Kami</h2>
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
 					<!-- CARD PROGRAM 1 -->
-					<div class="bg-gray-300 shadow-md rounded-lg p-6 h-full w-full lg:grid lg:grid-cols-3 lg:gap-2 flex flex-col-reverse">
+					<div class="bg-gray-300 shadow-md rounded-lg p-6 xl:h-64 w-full lg:grid lg:grid-cols-3 lg:gap-2 flex flex-col-reverse overflow-hidden">
 						<div class="lg:col-span-2">
-							<h3 class="text-xl font-bold text-center lg:text-start my-2 lg:my-0 ">Pengelolaan Sampah Plastik</h3>
-							<p class="text-sm lg:mt-5 text-justify hyphens-auto">Pilah Sampah merupakan program yang dibawa oleh komunitas green economy dengan tujuan meningkatkan kesadaran dan partisipasi warga sekolah dalam pengelolaan sampah dengan cara memisahkan sampah berdasarkan jenisnya. 
+							<h3 class="text-lg font-bold text-center lg:text-start my-2 lg:my-0 ">Pengelolaan Sampah Plastik</h3>
+							<p class="text-sm lg:mt-2 text-justify hyphens-auto">Pilah Sampah merupakan program yang dibawa oleh komunitas green economy dengan tujuan meningkatkan kesadaran dan partisipasi warga sekolah dalam pengelolaan sampah dengan cara memisahkan sampah berdasarkan jenisnya. 
 							</p>
 							<div class="lg:hidden text-end mt-1">
 								<a href="{{ route('pilah') }}" class="text-green-600 hover:underline text-sm hover:text-base duration-300 ">Detail ></a>
@@ -70,10 +70,10 @@
 						</div>
 					</div>
 					<!-- CARD PROGRAM 2 -->
-					<div class="bg-gray-300 shadow-md rounded-lg p-6 h-full w-full lg:grid lg:grid-cols-3 lg:gap-2 flex flex-col-reverse">
+					<div class="bg-gray-300 shadow-md rounded-lg p-6 xl:h-64 w-full lg:grid lg:grid-cols-3 lg:gap-2 flex flex-col-reverse overflow-hidden">
 						<div class="lg:col-span-2">
-							<h3 class="text-xl font-bold text-center lg:text-start my-2 lg:my-0 ">Beasiswa Sampah</h3>
-							<p class="text-sm lg:mt-5 text-justify hyphens-auto">Beasiswa Sampah merupakan progam yang dibawa oleh komunitas Green Economy dengan konsep pemanfaatan potensi sampah di lingkungan sekolah menjadi subsidi beasiswa untuk siswa/i yang kurang mampu. Tujuan program ini adalah untuk mendukung pendidikan siswa yang membutuhkan bantuan finansial sekaligus mendorong kesadaran akan pentingnya pengelolaan sampah dan menjaga lingkungan.</p>
+							<h3 class="text-lg font-bold text-center lg:text-start my-2 lg:my-0 ">Beasiswa Sampah</h3>
+							<p class="text-sm lg:mt-2 text-justify hyphens-auto">Beasiswa Sampah merupakan progam yang dibawa oleh komunitas Green Economy dengan konsep pemanfaatan potensi sampah di lingkungan sekolah menjadi subsidi beasiswa untuk siswa/i yang kurang mampu. Dengan tujuan membantu dan mendorong kesadaran warga sekolah akan kebersihan lingkungan.</p>
 							<div class="lg:hidden text-end mt-1">
 								<a href="{{ route('beasiswa') }}" class="text-green-600 hover:underline text-sm hover:text-base duration-300 ">Detail ></a>
 							</div>
@@ -88,10 +88,10 @@
 						</div>
 					</div>
 					<!-- CARD PROGRAM 3 -->
-					<div class="bg-gray-300 shadow-md rounded-lg p-6 h-full w-full lg:grid lg:grid-cols-3 lg:gap-2 flex flex-col-reverse">
+					<div class="bg-gray-300 shadow-md rounded-lg p-6 xl:h-64 w-full lg:grid lg:grid-cols-3 lg:gap-2 flex flex-col-reverse overflow-hidden">
 						<div class="lg:col-span-2">
-							<h3 class="text-xl font-bold text-center lg:text-start my-2 lg:my-0 ">Minyak Jelantah</h3>
-							<p class="text-sm lg:mt-5 text-justify hyphens-auto">Program Minyak Jelantah merupakan program yang dibawa oleh Green Economy SMKN 2 dengan pemanfaatan limbah minyak goreng bekas. Tujuan program ini untuk mengurangi dampak negatif minyak jelantah terhadap lingkungan dan dimanfaatkan sebagai sumber daya yang lebih berharga.</p>
+							<h3 class="text-lg font-bold text-center lg:text-start my-2 lg:my-0 ">Minyak Jelantah</h3>
+							<p class="text-sm lg:mt-2 text-justify hyphens-auto">Program Minyak Jelantah merupakan program yang dibawa oleh Green Economy SMKN 2 dengan pemanfaatan limbah minyak goreng bekas. Tujuan program ini untuk mengurangi dampak negatif minyak jelantah terhadap lingkungan dan dimanfaatkan sebagai sumber daya yang lebih berharga.</p>
 							<div class="lg:hidden text-end mt-1">
 								<a href="{{ route('minyak') }}" class="text-green-600 hover:underline text-sm hover:text-base duration-300 ">Detail ></a>
 							</div>
@@ -106,10 +106,10 @@
 						</div>
 					</div>
 					<!-- CARD PROGRAM 4 -->
-					<div class="bg-gray-300 shadow-md rounded-lg p-6 h-full w-full lg:grid lg:grid-cols-3 lg:gap-2 flex flex-col-reverse">
+					<div class="bg-gray-300 shadow-md rounded-lg p-6 xl:h-64 w-full lg:grid lg:grid-cols-3 lg:gap-2 flex flex-col-reverse overflow-hidden">
 						<div class="lg:col-span-2">
-							<h3 class="text-xl font-bold text-center lg:text-start my-2 lg:my-0 ">Pot Bunga Botol Plastik</h3>
-							<p class="text-sm lg:mt-5 text-justify hyphens-auto">Program Penghijauan merupakan program yang dibawa oleh Green Economy SMKN 2 Banjarmasin yang berfokus pada penghijauan untuk lingkungan sekolah. Tujuan dari Program ini selain untuk penghijauan, juga dapat menjadi media estetika sekolah.</p>
+							<h3 class="text-lg font-bold text-center lg:text-start my-2 lg:my-0 ">Pot Bunga Botol Plastik</h3>
+							<p class="text-sm lg:mt-2 text-justify hyphens-auto">Program Penghijauan merupakan program yang dibawa oleh Green Economy SMKN 2 Banjarmasin yang berfokus pada penghijauan untuk lingkungan sekolah. Tujuan dari Program ini selain untuk penghijauan, juga dapat menjadi media estetika sekolah.</p>
 							<div class="lg:hidden text-end mt-1">
 								<a href="{{ route('pot') }}" class="text-green-600 hover:underline text-sm hover:text-base duration-300 ">Detail ></a>
 							</div>
@@ -128,7 +128,7 @@
 		</section> 
 
 		<!-- Peringkat Section -->
-		<section id="peringkat" class="py-12 px-8 lg:px-52 bg-wrey">
+		<section id="peringkat" class="py-12 px-8 lg:px-32 bg-wrey">
 			<div class="lg:my-16 my-8">
 				<h2 class="lg:text-3xl text-2xl font-bold mb-8">Peringkat Jurusan</h2>
 				<div class="bg-white lg:py-12 p-6 lg:px-20 rounded-lg shadow-md">
@@ -255,7 +255,7 @@
 		</section>
 
 		<!-- Contact Section -->
-		<section id="contact" class="lg:px-52 px-8 py-12 lg:py-32 bg-wrey">
+		<section id="contact" class="lg:px-32 px-8 py-12 lg:py-32 bg-wrey">
 			<div class="container my-2 lg:my-0">
 				<h2 class="text-3xl font-bold mb-8">Kontak Kami</h2>
 				<div>

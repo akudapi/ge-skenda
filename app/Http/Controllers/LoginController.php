@@ -11,26 +11,25 @@ use function Laravel\Prompts\password;
 
 class LoginController extends Controller
 {
-    public function login_proses(Request $request){
-
-        // dd($request->all());
-
+    public function login_proses(Request $request)
+    {
+        // Validasi input
         $request->validate([
             'username'  => 'required',
             'password'  => 'required',
         ]);
 
-        $data = [
-            'username'  => $request->username,
-            'password'  => $request->password,
-        ];
+        // Coba autentikasi user
+        $credentials = $request->only('username', 'password');
 
-        if(Auth::attempt($data)){
+        // Jika login berhasil
+        if (Auth::attempt($credentials)) {
+            // Mengarahkan kembali ke halaman yang dicoba diakses sebelum login, atau ke dashboard
             return redirect()->back();
-        }else{
-            return redirect()->back();
-       }
+        }
 
+        // Jika login gagal, kembalikan dengan pesan error
+        return back()->with('loginError', 'Login gagal, periksa username atau password Anda.');
     }
 
     public function logout(){

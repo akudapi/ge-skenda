@@ -10,7 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Road+Rage&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     {{-- tailwind css --}}
-	<link rel="stylesheet" href="{{ asset('build/assets/app-9kXum9lR.css') }}">
+	@vite('resources/css/app.css')
 	{{-- css --}}
 	<link rel="stylesheet" href="{{ asset("css/style.css") }}">
 </head>
@@ -19,7 +19,7 @@
 	<div>
 		
 		<!-- Sticky Header -->
-		<header class="fixed w-full z-30 py-3 px-5 sm:px-52 header-white backdrop-blur">
+		<header class="fixed w-full z-30 py-3 px-5 sm:px-32 header-white backdrop-blur">
 			<div class="container mx-auto grid grid-cols-4 col-auto items-center">
 				<div class="font-bold flex items-center col-span-3 sm:col-span-1">
 					<a href="{{ route('index') }}"><img class="size-10 mr-2.5" src="{{ asset("../image/ge-green.png") }}" alt="icon header"></a>
@@ -90,12 +90,12 @@
 					@csrf
 					<div class="mb-4">
 						<label for="username" class="block text-base text-gray-700 font-semibold mb-1">Username:</label>
-						<input type="text" name="username" id="username" placeholder="Masukan username" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+						<input type="text" required name="username" id="username" placeholder="Masukan username" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
 					</div>
 					<div class="mb-6 relative">
 						<label for="password" class="block text-base text-gray-700 font-semibold mb-1">Password:</label>
 						<div class="relative">
-							<input type="password" name="password" id="password" placeholder="Masukan password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10">
+							<input type="password" required name="password" id="password" placeholder="Masukan password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10">
 							<!-- Eye Icon inside the input field -->
 							<button type="button" id="togglePassword" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-600">
 								<svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
