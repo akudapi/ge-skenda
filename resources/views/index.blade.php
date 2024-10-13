@@ -133,9 +133,15 @@
 				<h2 class="lg:text-3xl text-2xl font-bold mb-8">Peringkat Jurusan</h2>
 				<div class="bg-white lg:py-12 p-6 lg:px-20 rounded-lg shadow-md">
 					<div class="mb-5 sm:grid sm:grid-cols-4 flex flex-col gap-2">
-						<h1 class="sm:col-span-1 text-lg sm:text-xl font-semibold">Table Peringkat</h1>
-						<div class="sm:col-span-3 sm:grid sm:justify-end gap-2">
-							{{-- resources/views/peringkat/index.blade.php --}}
+						<div class="sm:col-span-2 grid grid-cols-3">
+							<h1 class="col-span-1 text-lg sm:text-xl font-semibold">Table Peringkat</h1>
+							<div class="col-span-2 flex justify-end items-center sm:justify-start">
+								<a href="{{ route('poin.history') }}" class="border border-black text-black hover:bg-black hover:text-white duration-300 lg:py-1 font-bold lg:px-3 rounded-full text-sm p-1 px-2 w-fit">
+									Poin History
+								</a>
+							</div>
+						</div>
+						<div class="sm:col-span-2 sm:grid sm:justify-end gap-2">
 							<form method="GET" action="{{ route('index', '#peringkat') }}" class="grid grid-rows-2 gap-2 sm:flex">
 								<div class="grid grid-cols-4 sm:gap-2 sm:items-center">
 									<label for="month">Bulan:</label>
@@ -177,22 +183,20 @@
 							</tr>
 						</thead>
 						<tbody id="tableBody">
-							@foreach ($data as $d)
+							@foreach ($sortedJurusan as $j)
 								<tr>
 									<td class="border-y-2 py-3 border-slate-700 text-center">{{ $loop->iteration }}.</td>
 									<td class="border-y-2 border-slate-700 text-center align-middle">
-										<img class="w-8 sm:w-10 rounded-full inline-block" src="{{ asset('image/'.$d->jurusan->gambar ) }}" alt="LAMBANG JURUSAN">
+										<img class="w-8 sm:w-10 rounded-full inline-block" src="{{ asset('image/'.$j->gambar ) }}" alt="{{ $j->jurusan }}">
 									</td> 
-									<td class="border-y-2 py-3 border-slate-700 text-sm text-center sm:text-lg sm:text-start">{{ $d->jurusan->jurusan }}</td>
+									<td class="border-y-2 py-3 border-slate-700 text-sm text-center sm:text-lg sm:text-start">{{ $j->jurusan }}</td>
 									<td class="border-y-2 py-3 border-slate-700 text-center">
-										{{ $month && $year ? $d->poin : $d->total_poin }}<small class="text-red-400">kg</small>
+										{{ isset($poinMapping[$j->id]) ? $poinMapping[$j->id] : 0 }}<small class="text-red-400">kg</small>
 									</td>
 								</tr>
 							@endforeach
 						</tbody>
 					</table>
-
-
 					<div class="grid grid-cols-2 mt-3">
 						<div class="col-span-1">
 							@if(Auth::user())
@@ -201,7 +205,7 @@
 								</button>
 							@endif
 						</div>
-						<div class="col-span-1 text-end">
+						<div class="col-span-1 text-end flex justify-end items-center gap-8">
 							<div class="text-sm text-gray-600">
 								@if($month && $year)
 									<h3>Menampilkan data untuk bulan: {{ \Carbon\Carbon::createFromDate(null, $month, 1)->format('F') }} {{ $year }}</h3>

@@ -13,4 +13,10 @@ class Jurusan extends Model
         'gambar',
         'jurusan',
     ];
+
+    // Relasi ke model Poin
+    public function poin()
+    {
+        return $this->hasMany(Poin::class, 'jurusans_id');
+    }
 }

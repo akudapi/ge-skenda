@@ -21,6 +21,10 @@ Route::get('/minyak',[HomeController::class,'minyak'])->name('minyak');
 Route::get('/pot',[HomeController::class,'pot'])->name('pot');
 
 
+Route::get('/poin-history', [App\Http\Controllers\HomeController::class, 'showPoinHistory'])->name('poin.history');
+
+
+
 Route::middleware(['auth'])->group(function(){
 
     // route nambah point(kg)
