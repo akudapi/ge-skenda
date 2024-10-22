@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Jurusan;
 use App\Models\Peringkat;
 use App\Models\Poin;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -13,6 +14,7 @@ class HomeController extends Controller
 
     public function index(Request $request)
     {
+
         $month = $request->input('month');
         $year = $request->input('year');
     
@@ -66,9 +68,13 @@ class HomeController extends Controller
         // Ambil tanggal terakhir diperbarui dan konversi ke objek Carbon
         $lastUpdate = Poin::max('updated_at');
         $lastUpdate = $lastUpdate ? Carbon::parse($lastUpdate) : null;
+
+        $users = User::all();
+
+        $totalDana = $users->sum('dana');
     
         // Kirim data ke view
-        return view('index', compact('data', 'jurusan', 'sortedJurusan', 'poinMapping', 'month', 'months', 'year', 'years', 'lastUpdate'));
+        return view('index', compact('data', 'jurusan', 'sortedJurusan', 'poinMapping', 'month', 'months', 'year', 'years', 'lastUpdate', 'users', 'totalDana'));
     }
     
 

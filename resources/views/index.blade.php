@@ -13,8 +13,8 @@
 							<h1 class="lg:text-8xl lg:-rotate-6 text-5xl">BEASISWA</h1>
 							<h1 class="lg:text-8xl lg:ml-48 text-5xl">SAMPAH</h1>
 						</div>
-						<div>
-							<p class="lg:text-4xl text-2xl font-roadrage text-center">By <span class="text-green-500">Green Economy</span> & Pilah Sampah Banjarmasin</p>
+						<div class="px-40">
+							<p class="lg:text-4xl text-2xl font-roadrage">By <span class="text-green-500">Green Economy</span></p>
 						</div>
 					</div>
 					<div class="lg:col-span-2 flex justify-center">
@@ -25,9 +25,9 @@
 		</section>
 
 		<!-- About Section -->
-		<section id="about" class="py-8 lg:px-32 px-8 bg-wrey flex justify-center items-center">
+		<section id="about" class="py-8 lg:px-32 px-8 bg-wrey flex justify-center items-center shadow-lg">
 			<div class="my-10 lg:grid lg:grid-cols-4 gap-6 container mx-auto">
-				<div class="lg:col-span-1 flex justify-center items-center">
+				<div class="lg:col-span-1 flex justify-center items-center shadow-lg">
 					<img class="" src="{{ asset("../image/tps.jpg") }}" alt="leaf">
 				</div>
 				<div class="lg:col-span-3">
@@ -42,11 +42,11 @@
 		<!-- Form Section -->
 		<section class="bg-black text-white py-12 text-center">
 			<h1 class="font-extrabold text-3xl">JOIN OUR COMUNITY</h1>
-			<a href="https://forms.gle/2Jpm3GMmeoCRn1uZA" class="mt-6 inline-block border hover:bg-white delay-75 duration-200 hover:text-black py-2.5 font-bold px-4 rounded-full">Registration Form</a>
+			<a href="https://docs.google.com/forms/d/e/1FAIpQLSfaiK1up0NEmEIhhkAzPqin37hyFH0Y_0porYF455TpWxaDoA/viewform" class="mt-6 inline-block border hover:bg-white delay-75 duration-200 hover:text-black py-2.5 font-bold px-4 rounded-full">Registration Form</a>
 		</section>
 
 		<!-- Program Section -->
-		<section id="program" class="py-12 px-8 lg:px-32 bg-wrey flex justify-center items-center">
+		<section id="program" class="py-12 px-8 lg:px-32 bg-wrey flex justify-center items-center shadow-lg">
 			<div class="container lg:my-16 my-8">
 				<h2 class="lg:text-3xl text-2xl font-bold mb-8">Program Kami</h2>
 				<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -127,15 +127,49 @@
 			</div>
 		</section> 
 
+		<section class="flex flex-col justify-center items-center gap-8 py-8 px-8 lg:px-32 bg-wrey">
+			<h1 class="text-2xl font-semibold">Jenis Sampah Yang Kami Terima:</h1>
+			<div class="flex flex-col md:flex-row flex-nowrap gap-4">
+				{{-- card 1 --}}
+				<div class="flex justify-center items-center shadow-lg div h-[8em] w-[15em] bg-white m-auto rounded-[1em] relative group p-2 z-0 overflow-hidden">
+					<div class="z-[-1] h-full w-[200%] rounded-[1em] bg-gradient-to-br from-green-400 via-lime-400 to-yellow-400 absolute bottom-full right-0 group-hover:-rotate-90 group-hover:h-[300%] duration-500 origin-bottom-right"></div>
+					<h1 class="z-20 font-bold font-Poppin group-hover:text-white delay-150 text-[1.4em]">
+						BOTOL PLASTIK
+					</h1>
+				</div>
+				{{-- card 2 --}}
+				<div class="flex justify-center items-center shadow-lg div h-[8em] w-[15em] bg-white m-auto rounded-[1em] relative group p-2 z-0 overflow-hidden">
+					<div class="z-[-1] h-full w-[200%] rounded-[1em] bg-gradient-to-br from-green-400 via-lime-400 to-yellow-400 absolute bottom-full right-0 group-hover:-rotate-90 group-hover:h-[300%] duration-500 origin-bottom-right"></div>
+					<h1 class="z-20 font-bold font-Poppin group-hover:text-white delay-150 text-[1.4em]">
+						KERTAS HVS
+					</h1>
+				</div>
+				{{-- card 3 --}}
+				<div class="flex justify-center items-center shadow-lg div h-[8em] w-[15em] bg-white m-auto rounded-[1em] relative group p-2 z-0 overflow-hidden">
+					<div class="z-[-1] h-full w-[200%] rounded-[1em] bg-gradient-to-br from-green-400 via-lime-400 to-yellow-400 absolute bottom-full right-0 group-hover:-rotate-90 group-hover:h-[300%] duration-500 origin-bottom-right"></div>
+					<h1 class="z-20 font-bold font-Poppin group-hover:text-white delay-150 text-[1.4em]">
+						KARDUS
+					</h1>
+				</div>
+				{{-- card 4 --}}
+				<div class="flex justify-center items-center shadow-lg div h-[8em] w-[15em] bg-white m-auto rounded-[1em] relative group p-2 z-0 overflow-hidden">
+					<div class="z-[-1] h-full w-[200%] rounded-[1em] bg-gradient-to-br from-green-400 via-lime-400 to-yellow-400 absolute bottom-full right-0 group-hover:-rotate-90 group-hover:h-[300%] duration-500 origin-bottom-right"></div>
+					<h1 class="z-20 font-bold font-Poppin group-hover:text-white delay-150 text-[1.4em]">
+						MINYAK JELANTAH
+					</h1>
+				</div>
+			</div>
+		</section>
+
 		<!-- Peringkat Section -->
 		<section id="peringkat" class="py-12 px-8 lg:px-32 bg-wrey">
 			<div class="lg:my-16 my-8">
 				<h2 class="lg:text-3xl text-2xl font-bold mb-8">Peringkat Jurusan</h2>
 				<div class="bg-white lg:py-12 p-6 lg:px-20 rounded-lg shadow-md">
 					<div class="mb-5 sm:grid sm:grid-cols-4 flex flex-col gap-2">
-						<div class="sm:col-span-2 grid grid-cols-3">
+						<div class="sm:col-span-2 grid grid-cols-2">
 							<h1 class="col-span-1 text-lg sm:text-xl font-semibold">Table Peringkat</h1>
-							<div class="col-span-2 flex justify-end items-center sm:justify-start">
+							<div class="col-span-1 flex justify-end items-center sm:justify-start">
 								<a href="{{ route('poin.history') }}" class="border border-black text-black hover:bg-black hover:text-white duration-300 lg:py-1 font-bold lg:px-3 rounded-full text-sm p-1 px-2 w-fit">
 									Poin History
 								</a>
@@ -258,6 +292,12 @@
 			</div>
 		</section>
 
+		{{-- TOTAL DANA --}}
+		<section class="flex flex-col justify-center items-center gap-8 py-12 px-8 lg:px-32 bg-wrey">
+			<p class="text-3xl font-semibold">Jumlah Dana Terkumpul</p>
+			<h1 class="text-5xl font-bold">Rp. {{ number_format($totalDana, 0, ',', '.') }}</h1>
+		</section>
+
 		<!-- Contact Section -->
 		<section id="contact" class="lg:px-32 px-8 py-12 lg:py-32 bg-wrey">
 			<div class="container my-2 lg:my-0">
@@ -265,8 +305,18 @@
 				<div>
 					<div class="lg:col-span-1 row-span-1">
 						<div class="text-left space-y-2 w-full">
-							<p class="bg-gray-200 py-2 px-2 shadow-md rounded-lg"><strong>Email:</strong> greeneconomysmkn2bjm@gmail.com</p>
-							<p class="bg-gray-200 py-2 px-2 shadow-md rounded-lg"><strong>Instagram:</strong> @greeneconomysmkn2bjm</p>
+							<a href="mailto:greeneconomysmkn2bjm@gmail.com" class="bg-gray-200 py-2 px-2 shadow-md rounded-lg flex gap-2 items-center">
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"></path></svg>
+								<p>greeneconomysmkn2bjm@gmail.com</p>
+							</a>
+							<a href="https://www.instagram.com/gecoskenda/" class="bg-gray-200 py-2 px-2 shadow-md rounded-lg flex gap-2 items-center">
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
+								<p>@gecoskenda</p>
+							</a>
+							<a href="https://wa.me/6285750756085" class="bg-gray-200 py-2 px-2 shadow-md rounded-lg flex gap-2 items-center">
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"></path></svg>
+								<p>+62 857-5075-6085</p>
+							</a>
 						</div>
 					</div>
 					{{-- <div class="lg:col-span-1 row-span-2">

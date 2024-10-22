@@ -43,18 +43,6 @@ return new class extends Migration
             $table->foreign('jurusans_id')->references('id')->on('jurusans')->onDelete('cascade');
         });
 
-        // data poin
-        DB::table('poins')->insert([
-            ['jurusans_id' => 1, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 2, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 3, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 4, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 5, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 6, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 7, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-            ['jurusans_id' => 8, 'poin' => 0, 'contributed_at' => '2024-09-17', 'created_at' => now(), 'updated_at' => now()],
-        ]);
-
     }
 
     /**

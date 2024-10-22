@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('username')->unique();
             $table->string('email')->unique();
+            $table->integer('dana')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
@@ -44,6 +45,7 @@ return new class extends Migration
             'name' => 'Admin',
             'username' => 'admin',
             'email' => 'greeneconomy@gmail.com',
+            'dana' => '0',
             'password' => Hash::make('admin1234567890-='),
             'created_at' => now(),
             'updated_at' => now(),

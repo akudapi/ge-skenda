@@ -13,7 +13,7 @@ class PeringkatController extends Controller
         // Validasi input
         $request->validate([
             'jurusan' => 'required|exists:jurusans,id',
-            'point' => 'required|integer|min:0',
+            'point' => 'required|min:0',
         ]);
     
         // Simpan data ke dalam database

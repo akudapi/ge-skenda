@@ -32,8 +32,10 @@ Route::middleware(['auth'])->group(function(){
     
     // Route untuk halaman admin
     Route::get('/admin/poin', [AdminController::class, 'peringkat'])->name('admin.poin');
+    Route::get('/admin/dana', [AdminController::class, 'dana'])->name('admin.dana');
     // Route untuk update data
     Route::post('/admin/poin/update/{id}', [AdminController::class, 'update'])->name('admin.poin.update');
+    Route::post('/update-dana', [AdminController::class, 'updateDana'])->name('updateDana')->middleware('auth');
     // Route untuk delete data
     Route::post('/admin/poin/delete/{id}', [AdminController::class, 'destroy'])->name('admin.poin.delete');
     
